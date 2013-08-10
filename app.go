@@ -14,9 +14,13 @@ const pageContent = `
 <html>
   <head><title>GREENview Kitchens</title></head>
   <style>
-    html, body, p {
+    html, body {
       font-family: helvetica, arial;
-      margin: 0;
+      background-color: #EBEBEC;
+    }
+    .center {
+      align: center;
+      text-align: center;
     }
     .background {
       max-width: 100%;
@@ -24,9 +28,9 @@ const pageContent = `
     }
   </style>
   <body>
-    <center>
+    <div class="center">
       <img class="background" src="/images/background.jpg"></img>
-    </center>
+    </div>
   </body>
 </html>
 `
