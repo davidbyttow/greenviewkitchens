@@ -1,0 +1,24 @@
+application: greenviewkitchens
+version: 1
+runtime: go
+api_version: go1
+
+handlers:
+- url: /favicon\.ico
+  static_files: data/static/images/favicon.ico
+  upload: data/static/images/favicon\.ico
+
+- url: /html
+  static_dir: data/static/html
+
+- url: /images
+  static_dir: data/static/images
+
+- url: /js
+  static_dir: data/static/js
+
+- url: /style
+  static_dir: data/static/style
+
+- url: /.*
+  script: _go_app
