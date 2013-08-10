@@ -24,7 +24,9 @@ const pageContent = `
     }
   </style>
   <body>
-    <img class="background" src="/images/background.jpg"></img>
+    <center>
+      <img class="background" src="/images/background.jpg"></img>
+    </center>
   </body>
 </html>
 `
