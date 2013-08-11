@@ -10,16 +10,19 @@ a {
   color: #DDD;
 }
 
+.canvas {
+  min-width: 320px;
+}
 
 .title {
   float: left;
   color: #DDD;
-  font-size: 20pt;
+  font-size: 16pt;
   padding: 0.5em;
 }
 
 .contact {
-  font-size: 14pt;
+  font-size: 12pt;
   float: right;
   text-align: bottom;
   margin-top: 1em;
