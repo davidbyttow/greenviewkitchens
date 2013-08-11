@@ -3,6 +3,7 @@ html, body {
   background-color: #222;
   margin: 0;
   font-weight: 100;
+  font-size: 16pt;
 }
 
 a {
@@ -17,15 +18,14 @@ a {
 .title {
   float: left;
   color: #DDD;
-  font-size: 16pt;
   padding: 0.5em;
 }
 
 .contact {
-  font-size: 12pt;
+  font-size: 60%;
   float: right;
   text-align: bottom;
-  margin-top: 1em;
+  margin-top: 1.6em;
   margin-right: 0.5em;
 }
 
@@ -37,4 +37,16 @@ a {
   background-color: #EEE;
   background-repeat: no-repeat;
   cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  html, body {
+    font-size: 12pt;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  html, body {
+    font-size: 12pt;
+  }
 }

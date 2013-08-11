@@ -39,25 +39,38 @@ function resizeImage(image, $imageWindow) {
   $imageWindow.css('background-position', cssDims(-sizeX * zoom * 0.5, -sizeY * zoom * 0.5));
 }
 
-function changeImage(imageUrl) {
-  $imageWindow = $('.image-window');
+function initImage(imageUrl) {
   loadImage(imageUrl, function(image) {
-    $imageWindow.css('background-image', 'url(' + imageUrl + ')');
-    resizeImage(image, $imageWindow);
     $(window).resize(function() {
       resizeImage(image, $imageWindow);
     });
   });
 }
 
-function __main__() {
+function changeImage(imageUrl, opt_callback) {
   $imageWindow = $('.image-window');
+  loadImage(imageUrl, function(image) {
+    $imageWindow.css('background-image', 'url(' + imageUrl + ')');
+    if (opt_callback) {
+      opt_callback();
+    }
+    resizeImage(image, $imageWindow);
+  });
+}
+
+function __main__() {
+  for (var i = 0; i < images.length; ++i) {
+    initImage(images[i]);
+  }
   changeImage(images[index]);
+
+  $imageWindow = $('.image-window');
   $imageWindow.click(function() {
     $imageWindow.fadeOut("fast", function() {
       index = (index + 1) % images.length;
-      changeImage(images[index]);
-      $imageWindow.fadeIn("fast");
+      changeImage(images[index], function() {
+        $imageWindow.fadeIn("fast");
+      });
     });
   });
 }
