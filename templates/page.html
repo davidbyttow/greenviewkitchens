@@ -5,14 +5,71 @@
         user-scalable="no">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300, 100'
         rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="/style/app.css" >
+    <style>
+html, body {
+  font-family: 'Roboto', arial, sans-serif;
+  background-color: #222;
+  margin: 0;
+  font-weight: 100;
+  font-size: 16pt;
+}
+
+a {
+  text-decoration: none;
+  color: #DDD;
+}
+
+.canvas {
+  min-width: 320px;
+}
+
+.title {
+  float: left;
+  color: #DDD;
+  padding: 0.5em;
+}
+
+.green {
+  color: #66cc00;
+}
+
+.contact {
+  font-size: 60%;
+  float: right;
+  text-align: bottom;
+  margin-top: 1.6em;
+  margin-right: 0.5em;
+}
+
+.canvas {
+}
+
+.image-window {
+  clear: both;
+  background-color: #EEE;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  html, body {
+    font-size: 12pt;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  html, body {
+    font-size: 12pt;
+  }
+}
+    </style>
     <script src="/js/lib/jquery.min.js"></script>
     <title>Greenview Kitchens</title>
   </head>
   <body>
     <div class="canvas">
       <div class="title">
-        Greenview Kitchens
+        <span class="green">Green</span>view Kitchens
       </div>
       <div class="contact">
         <a href="mailto:mark@byttow.com">mark@byttow.com</a>
